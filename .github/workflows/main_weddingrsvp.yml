@@ -23,6 +23,9 @@ jobs:
         with:
           dotnet-version: '9.x'
 
+      - name: Restore dependencies
+        run: dotnet restore WeddingRsvpApi.csproj
+
       - name: Build with dotnet
         run: dotnet build WeddingRsvpApi.csproj --configuration Release --no-restore
 
@@ -64,3 +67,4 @@ jobs:
           package: .
 
           
+
